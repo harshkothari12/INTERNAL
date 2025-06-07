@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAMIOCA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white w-full p-2 shadow flex items-center justify-between">
+        <div class="flex items-center flex-1">
+            <!-- User Dropdown -->
+            <div class="relative inline-block text-left">
+                <button id="dropdownButton"
+                    class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+                    <div class="w-8 h-8 rounded-full bg-gray-300">
+                        <img src="./07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt=""
+                            class="w-8 h-8 rounded-full bg-gray-300" />
+                    </div>
+                    <span class="font-semibold">Dominique Ch.</span>
+                    <i class="fas fa-chevron-down text-sm"></i>
+                </button>
+                <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+                    <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+                        <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+                        <i class="fas fa-rocket text-gray-600"></i> Performance review
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Search -->
+            <div class="flex items-center gap-2 text-sm text-gray-500 ml-8 cursor-pointer">
+                <img src="./search.png" alt="Search" class="w-5 h-5" />
+                <span>Quick search</span>
+            </div>
+        </div>
+        <!-- Notifications -->
+        <div class="relative">
+            <img src="./notifications.png" alt="Notifications" class="w-5 h-5 cursor-pointer" />
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="flex h-[calc(100vh-64px)]">
+        <!-- Sidebar -->
+        <aside class="w-64 p-6 flex flex-col justify-between bg-gray-100">
+            <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./dashboard.png" alt="Dashboard" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./PO.png" alt="People" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./assignment.png" alt="Projects" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-calendar.png" alt="Calendar" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html" class="flex items-center text-blue-600 bg-blue-50 space-x-3  p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-easel.png" alt="Training" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-hourglass.png" alt="Timesheet" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600  p-2 rounded">
+          <img src="./_ionicons_svg_md-chatbubbles.png" alt="Reports" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./AS.png" alt="Administration" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./people.png" alt="Help" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+            <div class="bg-white rounded-lg text-center py-4">
+                <p class="text-xs font-extrabold font-[Montserrat]">CAMIOCA</p>
+                <p class="text-[10px] text-gray-500 font-[Roboto]">
+                    Version: 1.0.0.11
+                </p>
+            </div>
+        </aside>
+        <main class="flex-1 p-3 overflow-y-auto flex flex-col gap-6 relative pt-[25px]">
+           <div class="flex flex-wrap gap-6 ">
+                <div class="w-[214px] h-[116px]  rounded-xl flex flex-col items-center justify-center cursor-pointer bg-white">
+                    <i class="fas fa-calendar-alt text-2xl mb-2"></i>
+                    <p>Training timetable</p>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-search text-2xl mb-2 text-gray-600"></i>
+                    <a href="./Find_Treannig.html">Find training</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white  rounded-xl flex flex-col items-center justify-center text-gray-600 cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-comment text-2xl mb-2 "></i>
+                    <a href="./Feedback.html">Feedback</a>
+                </div>
+                <div class="w-[214px] h-[116px]bg-blue-500 text-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow  bg-blue-500 ">
+                    <i class="fas fa-question-circle text-2xl mb-2 "></i>
+                    <a href="./Quizzes.html">Quizzes</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-user-plus text-2xl mb-2 text-gray-600"></i>
+                    <a href="Treaning_Registration.html">Training registration</a>
+                </div>
+            </div>
+
+            <div class="w-[1200px] mx-auto space-y-6">
+                <!-- Passed Quizzes Section -->
+                <div class="bg-white rounded-lg shadow-sm ">
+                    <div class="flex items-center justify-between p-4 border-b">
+                        <h2 class="text-lg font-semibold">Passed quizzes:</h2>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-1 text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <span class="text-sm font-medium">2019</span>
+                            <button class="p-1 text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                            <button class="p-1 text-blue-500 hover:text-blue-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 15l7-7 7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr class="bg-gray-200">
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Date</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Training</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Quiz name</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Passed date</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Single pass</th>
+                                    <th class="px-4 py-2 text-center text-sm font-medium text-gray-600"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">24 Apr</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Security Awareness</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Quiz 1</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">25 Apr</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">16 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Induction program: Office user manual
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Quiz 1</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">16 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">16 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Induction program: Security</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Quiz 1</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">16 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">11 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Induction program: Capability profile
+                                        and corporate CV. Dashboard Overview</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Quiz 1</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">12 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">03 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Induction program: Career development in
+                                        company</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Quiz 1</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">03 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">01 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Induction program: Office policy</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Quiz 1</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">02 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Independent Quizzes Section -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="flex items-center justify-between p-4 border-b">
+                        <h2 class="text-lg font-semibold">Independent quizzes:</h2>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-1 text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <span class="text-sm font-medium">2019</span>
+                            <button class="p-1 text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                            <button class="p-1 text-blue-500 hover:text-blue-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 15l7-7 7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr class="bg-gray-200">
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Date</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Quiz name</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Single pass</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Quiz time</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Q count</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">24 Apr</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Hibernate 3.0</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Yes</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Infinitive</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">49</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">16 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">EJB</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Yes</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Infinitive</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">5</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">16 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">SP Introduction</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Infinitive</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">21</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">11 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">SP management processes</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Yes</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Infinitive</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">33</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">03 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">JSF</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Infinitive</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">21</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-4 py-3 text-sm text-gray-700">01 Feb</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Java programming : Build tools & Unit
+                                        testing</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Yes</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Infinitive</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">54</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="flex items-center justify-between px-4 py-3 border-t">
+                        <div class="flex items-center">
+                            <button class="px-2 py-1 text-sm text-gray-500 hover:text-gray-700 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                                Previous
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500 text-white text-sm">1</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-700 text-sm">2</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-700 text-sm">3</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-700 text-sm">4</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-700 text-sm">5</button>
+                            <span class="text-gray-500">...</span>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-700 text-sm">31</button>
+                        </div>
+                        <div class="flex items-center">
+                            <button class="px-2 py-1 text-sm text-blue-500 hover:text-blue-700 flex items-center">
+                                Next
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                            <button class="ml-4 px-2 py-1 text-sm text-gray-500 hover:text-gray-700">
+                                Show all
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const dropdownButton = document.getElementById("dropdownButton");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        dropdownButton.addEventListener("click", () => {
+            dropdownMenu.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add("hidden");
+            }
+        });
+    </script>
+</body>
+
+</html>

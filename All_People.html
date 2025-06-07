@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMIOCA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    /* Custom scrollbar for better aesthetics */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      /* gray-300 */
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #f1f5f9;
+      /* gray-100 */
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white w-full p-2 shadow flex items-center justify-between z-10 relative">
+    <div class="flex items-center flex-1">
+      <div class="relative inline-block text-left">
+        <button id="dropdownButton"
+          class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+          <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
+            <img src="07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt="User profile"
+              class="w-full h-full object-cover" />
+          </div>
+          <span class="font-semibold">Dominique Ch.</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+          <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-t-xl">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-b-xl">
+            <i class="fas fa-rocket text-gray-600"></i> Performance review
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-gray-500 ml-8 cursor-pointer">
+        <img src="search.png" alt="Search icon" class="w-5 h-5" />
+        <span>Quick search</span>
+      </div>
+    </div>
+    <div class="relative">
+      <img src="notifications.png" alt="Notifications icon" class="w-5 h-5 cursor-pointer" />
+    </div>
+  </header>
+
+  <div class="flex h-[calc(100vh-64px)]">
+    <aside class="w-64 p-6 flex flex-col justify-between bg-gray-100 flex-shrink-0">
+      <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="dashboard.png" alt="Dashboard icon" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html" class="flex items-center space-x-3 text-gray-700 bg-blue-500 p-2 rounded">
+          <img src="baseline-people-24px.png" alt="People icon" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="assignment.png" alt="Projects icon" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="_ionicons_svg_md-calendar.png" alt="Calendar icon" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="_ionicons_svg_md-easel.png" alt="Training icon" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="_ionicons_svg_md-hourglass.png" alt="Timesheet icon" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="_ionicons_svg_md-chatbubbles.png" alt="Reports icon" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="AS.png" alt="Administration icon" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="people.png" alt="Help icon" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+      <div class="bg-white rounded-lg text-center py-4">
+        <p class="text-xs font-extrabold font-[Montserrat]">CAMIOCA</p>
+        <p class="text-[10px] text-gray-500 font-[Roboto]">Version: 1.0.0.11</p>
+      </div>
+    </aside>
+
+    <main class="flex-1 p-3 overflow-y-auto flex flex-col">
+      <div class="flex-1 flex flex-col gap-6 pt-[25px]">
+        <div class="flex flex-wrap gap-6">
+          <div
+            class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow-sm">
+            <img src="_ionicons_svg_md-search.png" alt="Find person icon" />
+            <a href="./People.html">Find Person</a>
+          </div>
+
+          <div
+            class="w-[214px] h-[116px] bg-blue-500 text-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow-sm">
+            <img src="baseline-people-24px.png" alt="All people icon" />
+            <a href="./All_People.html">All People</a>
+          </div>
+          
+        </div>
+
+        <div class="bg-white shadow rounded-lg p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold text-gray-800">List of active people</h2>
+            <button
+              class="flex items-center px-4 py-2 bg-white text-blue-500 text-sm font-medium rounded border border-blue-500 hover:border-blue-600 transition">
+              <img src="./_ionicons_svg_md-download.png" alt="" class="w-4 h-4 mr-2">
+              Export to Excel
+            </button>
+          </div>
+
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full table-auto text-sm text-left text-gray-600">
+              <thead class="bg-gray-100 text-gray-700 font-medium">
+                <tr>
+                  <th class="px-4 py-2">Delivery billable</th>
+                  <th class="px-4 py-2">Delivery unbillable</th>
+                  <th class="px-4 py-2">Administration</th>
+                  <th class="px-4 py-2">CEO</th>
+                  <th class="px-4 py-2">Sales</th>
+                  <th class="px-4 py-2">Marketing</th>
+                  <th class="px-4 py-2">Finance</th>
+                  <th class="px-4 py-2">HR</th>
+                  <th class="px-4 py-2">IT</th>
+                  <th class="px-4 py-2">Legal</th>
+                  <th class="px-4 py-2">PPS</th>
+                  <th class="px-4 py-2">L & D</th>
+                  <th class="px-4 py-2">OG</th>
+                  <th class="px-4 py-2">OBS</th>
+                  <th class="px-4 py-2">EBO</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-800">
+                <tr class="bg-white">
+                  <td class="px-4 py-2">233</td>
+                  <td class="px-4 py-2">11</td>
+                  <td class="px-4 py-2">8</td>
+                  <td class="px-4 py-2">1</td>
+                  <td class="px-4 py-2">15</td>
+                  <td class="px-4 py-2">11</td>
+                  <td class="px-4 py-2">8</td>
+                  <td class="px-4 py-2">4</td>
+                  <td class="px-4 py-2">3</td>
+                  <td class="px-4 py-2">2</td>
+                  <td class="px-4 py-2">15</td>
+                  <td class="px-4 py-2">1</td>
+                  <td class="px-4 py-2">5</td>
+                  <td class="px-4 py-2">2</td>
+                  <td class="px-4 py-2">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4 text-sm text-gray-600 text-right">
+            <p>
+              <span class="font-medium text-gray-800">Delivery:</span> 581 &nbsp;&nbsp;
+              <span class="font-medium text-gray-800">Non-delivery:</span> 132 &nbsp;&nbsp;
+              <span class="font-medium text-gray-800">Total:</span> 713
+            </p>
+          </div>
+        </div>
+
+
+        <div class="flex bg-gray-100 space-x-6">
+          <aside class="w-[280px] flex-shrink-0 bg-white p-4 rounded-xl shadow self-start">
+            <h2 class="font-semibold text-lg mb-4">Filter</h2>
+
+            <div class="mb-4">
+              <h3 class="text-sm font-medium text-gray-700 mb-2">Regions</h3>
+              <ul class="space-y-1 text-sm">
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> UK (111)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" /> US (98)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" /> France (45)
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="text-sm font-medium text-gray-700 mb-2">Branches</h3>
+              <ul class="space-y-1 text-sm">
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> London (111)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> Liverpool (12)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> Manchester (5)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" /> Leeds (3)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" /> Cardiff (1)
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="text-sm font-medium text-gray-700 mb-2">Divisions</h3>
+              <ul class="space-y-1 text-sm">
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> Management (43)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> Finance (10)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> Legal (1)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" checked /> Operation (1)
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 rounded" /> IT (1)
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <button class="w-full bg-gray-200 text-gray-700 py-2 rounded-full border border-black hover:bg-gray-300">
+              Clear
+            </button>
+          </aside>
+
+          <div class="flex-1">
+            <div class="text-lg font-medium mb-4">
+              Found: <span class="font-semibold">110</span>
+            </div>
+
+            <div class="bg-white p-4 shadow rounded-lg">
+              <div class="flex justify-between items-center font-semibold text-lg mb-4">
+                <span>List of active people</span>
+                <img src="https://via.placeholder.com/24" alt="Options icon" class="cursor-pointer" />
+              </div>
+              <div class="overflow-auto">
+                <table class="w-full text-sm text-left border-t border-gray-200">
+                  <thead>
+                    <tr class="bg-gray-300 text-gray-600 border-b border-gray-200">
+                      <th class="p-3">Full name</th>
+                      <th class="p-3">Branch</th>
+                      <th class="p-3">Division</th>
+                      <th class="p-3">User type</th>
+                      <th class="p-3">Contract type</th>
+                      <th class="p-3">Start date</th>
+                      <th class="p-3">ID</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-800">
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Konstantin Konstantinopolsky</td>
+                      <td class="p-3">London</td>
+                      <td class="p-3">Management</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">12.01.2013</td>
+                      <td class="p-3">14321</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Andrew Salgado</td>
+                      <td class="p-3">London</td>
+                      <td class="p-3">Management</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">21.04.2014</td>
+                      <td class="p-3">21345</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Magdalena Edinborough</td>
+                      <td class="p-3">Liverpool</td>
+                      <td class="p-3">Operation</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Subcontractor</td>
+                      <td class="p-3">02.11.2015</td>
+                      <td class="p-3">1984</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Matt Travis</td>
+                      <td class="p-3">Liverpool</td>
+                      <td class="p-3">Operation</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">02.11.2016</td>
+                      <td class="p-3">13567</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Daniel Wellington</td>
+                      <td class="p-3">Manchester</td>
+                      <td class="p-3">Operation</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">02.11.2016</td>
+                      <td class="p-3">10973</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Lucia Minioni</td>
+                      <td class="p-3">Leeds</td>
+                      <td class="p-3">Finance</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">02.11.2011</td>
+                      <td class="p-3">0234</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Anette Brown</td>
+                      <td class="p-3">London</td>
+                      <td class="p-3">Operation</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">02.11.2005</td>
+                      <td class="p-3">4231</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Christian Lambrou</td>
+                      <td class="p-3">London</td>
+                      <td class="p-3">Finance</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">02.11.2009</td>
+                      <td class="p-3">4521</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300 border-b border-gray-200">
+                      <td class="p-3">Phil Collins</td>
+                      <td class="p-3">Manchester</td>
+                      <td class="p-3">Operation</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Subcontractor</td>
+                      <td class="p-3">02.11.2012</td>
+                      <td class="p-3">11432</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300">
+                      <td class="p-3">Winston Holiday</td>
+                      <td class="p-3">London</td>
+                      <td class="p-3">Operation</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">02.11.2017</td>
+                      <td class="p-3">45647</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-300">
+                      <td class="p-3">Carla Andrade</td>
+                      <td class="p-3">London</td>
+                      <td class="p-3">Operation</td>
+                      <td class="p-3">Delivery billable</td>
+                      <td class="p-3">Employee</td>
+                      <td class="p-3">02.11.2017</td>
+                      <td class="p-3">98761</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="flex justify-end gap-6 mt-4 text-sm text-gray-700">
+                  <p>Delivery: <span class="font-semibold">581</span></p>
+                  <p>Non-delivery: <span class="font-semibold">132</span></p>
+                  <p>Total: <span class="font-semibold">713</span></p>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-4 text-sm text-gray-700 pt-[25px]">
+                <div class="flex items-center space-x-2">
+                  <button class="px-2 py-1 rounded text-gray-400 cursor-not-allowed">
+                    &larr; Previous
+                  </button>
+                  <button class="px-3 py-1 rounded bg-blue-600 text-white font-medium">1</button>
+                  <button class="px-3 py-1 rounded hover:bg-gray-200">2</button>
+                  <button class="px-3 py-1 rounded hover:bg-gray-200">3</button>
+                  <button class="px-3 py-1 rounded hover:bg-gray-200">4</button>
+                  <button class="px-3 py-1 rounded hover:bg-gray-200">5</button>
+                  <span>...</span>
+                  <button class="px-3 py-1 rounded hover:bg-gray-200">31</button>
+                  <button class="text-blue-600 hover:underline">Next &rarr;</button>
+                  <button class="text-blue-600 hover:underline">Show all</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownButton.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+
+</html>

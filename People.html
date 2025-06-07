@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMIOCA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white w-full p-2 shadow flex items-center justify-between">
+    <div class="flex items-center flex-1">
+      <div class="relative inline-block text-left">
+        <button id="dropdownButton"
+          class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+          <div class="w-8 h-8 rounded-full bg-gray-300">
+            <img src="./07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt="User profile"
+              class="w-8 h-8 rounded-full object-cover" />
+          </div>
+          <span class="font-semibold">Dominique Ch.</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+          <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-b-xl">
+            <i class="fas fa-rocket text-gray-600"></i> Performance review
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-gray-500 ml-8 cursor-pointer">
+        <img src="./search.png" alt="Search icon" class="w-5 h-5" />
+        <span>Quick search</span>
+      </div>
+    </div>
+    <div class="relative">
+      <img src="./notifications.png" alt="Notifications icon" class="w-5 h-5 cursor-pointer" />
+    </div>
+  </header>
+
+  <div class="flex h-[calc(100vh-64px)]">
+    <aside class="w-64 p-6 flex flex-col justify-between bg-gray-100">
+      <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./dashboard.png" alt="Dashboard" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html" class="flex items-center space-x-3 text-blue-600 bg-blue-50  hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./PO.png" alt="People" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./assignment.png" alt="Projects" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-calendar.png" alt="Calendar" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-easel.png" alt="Training" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-hourglass.png" alt="Timesheet" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-gray-700 p-2 rounded">
+          <img src="./_ionicons_svg_md-chatbubbles.png" alt="Reports" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./AS.png" alt="Administration" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./people.png" alt="Help" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="flex-1 p-3 overflow-y-auto flex flex-col gap-6 relative pt-[25px]">
+
+      <!-- Main Content -->
+      <section class="flex-1 flex p-6 overflow-y-auto flex-col gap-6 relative pt-[10px]">
+        <!-- Action Tiles -->
+        <div class="flex flex-wrap gap-6">
+          <div
+            class="w-[214px] h-[116px] bg-blue-500  rounded-xl text-white flex flex-col items-center justify-center cursor-pointer">
+            <img src="./_ionicons_svg_md-search (1).png" alt="Find person" />
+            <a href="./People.html">Find Person</a>
+          </div>
+
+          <a href="./All_People.html"
+            class="w-[214px] h-[116px] bg-white text-black rounded-xl flex flex-col items-center justify-center cursor-pointer no-underline">
+            <img src="./PO.png" alt="All people" class="h-10 w-10" />
+            <span>All People</span>
+          </a>
+
+        </div>
+
+        <!-- Active People Table -->
+         <div class="w-[1150px]  bg-white rounded-lg shadow-sm p-6">
+        <h2 class="text-lg font-semibold text-gray-800 mb-6">Filter</h2>
+        
+        <form id="filterForm" class="space-y-6">
+            <!-- Row 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input type="text" name="name" placeholder="Andrew Sargent" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">CV</label>
+                    <input type="text" name="cv" placeholder="Search" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <div class="flex items-center gap-4 mt-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="capability" checked class="mr-2 text-blue-600">
+                            <span class="text-sm">Capability</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="technology" checked class="mr-2 text-blue-600">
+                            <span class="text-sm">Technology</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="certificate" checked class="mr-2 text-blue-600">
+                            <span class="text-sm">Certificate</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="course" checked class="mr-2 text-blue-600">
+                            <span class="text-sm">Course</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email address</label>
+                    <input type="email" name="email" placeholder="sargent@gmail.com" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Capabilities</label>
+                    <input type="text" name="capabilities" placeholder="Search" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <div class="flex items-center gap-4 mt-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="capabilities_mode" value="and" class="mr-2">
+                            <span class="text-sm">AND</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="capabilities_mode" value="or" checked class="mr-2">
+                            <span class="text-sm">OR</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Login</label>
+                    <input type="text" name="login" placeholder="Login" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Branch</label>
+                    <select name="branch" 
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">Select</option>
+                        <option value="branch1">Branch 1</option>
+                        <option value="branch2">Branch 2</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Technology</label>
+                    <input type="text" name="technology" placeholder="Search" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <div class="flex items-center gap-4 mt-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="technology_mode" value="and" class="mr-2">
+                            <span class="text-sm">AND</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="technology_mode" value="or" checked class="mr-2">
+                            <span class="text-sm">OR</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">TC Id</label>
+                    <input type="text" name="tc_id" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Practice</label>
+                    <select name="practice" 
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">Select</option>
+                        <option value="practice1">Practice 1</option>
+                        <option value="practice2">Practice 2</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Certificates</label>
+                    <input type="text" name="certificates" placeholder="Search" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <div class="flex items-center gap-4 mt-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="certificates_mode" value="and" class="mr-2">
+                            <span class="text-sm">AND</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="certificates_mode" value="or" checked class="mr-2">
+                            <span class="text-sm">OR</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">User type</label>
+                    <select name="user_type" 
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">Any</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Courses</label>
+                    <input type="text" name="courses" placeholder="Search" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <div class="flex items-center gap-4 mt-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="courses_mode" value="and" class="mr-2">
+                            <span class="text-sm">AND</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="courses_mode" value="or" checked class="mr-2">
+                            <span class="text-sm">OR</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">User contract type</label>
+                    <select name="user_contract_type" 
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">Any</option>
+                        <option value="permanent">Permanent</option>
+                        <option value="contract">Contract</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Education</label>
+                    <div class="flex gap-2">
+                        <select name="education" 
+                                class="flex-1 px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option value="">Select</option>
+                            <option value="bachelor">Bachelor</option>
+                            <option value="master">Master</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                        <input type="text" name="specialization" placeholder="Search for specialization" 
+                               class="flex-1 px-3 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkboxes Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                <div class="space-y-3">
+                    <label class="flex items-start">
+                        <input type="checkbox" name="show_user_details" checked class="mr-3 mt-1">
+                        <span class="text-sm text-gray-700">Show User Type, Login, Start Date, TC Id</span>
+                    </label>
+                    <label class="flex items-start">
+                        <input type="checkbox" name="show_contact_details" class="mr-3 mt-1">
+                        <span class="text-sm text-gray-700">Show Skype, Office phone, Mobile phone, Room number, Title</span>
+                    </label>
+                </div>
+                <div class="space-y-3">
+                    <label class="flex items-start">
+                        <input type="checkbox" name="show_assignments" class="mr-3 mt-1">
+                        <span class="text-sm text-gray-700">Show current assignments</span>
+                    </label>
+                    <label class="flex items-start">
+                        <input type="checkbox" name="include_terminated" class="mr-3 mt-1">
+                        <span class="text-sm text-gray-700">Include terminated employees</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-end gap-4 pt-6">
+                <button type="reset" 
+                        class="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors">
+                    Clear
+                </button>
+                <button type="submit" 
+                        class="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors">
+                    Search
+                </button>
+            </div>
+        </form>
+    </div>
+  </div>
+  </section>
+
+  </main>
+
+  <!-- Dropdown Toggle Script -->
+  <script>
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownButton.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+
+</html>

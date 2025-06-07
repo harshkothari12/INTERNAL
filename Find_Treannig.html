@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMIOCA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-white w-full p-2 shadow flex items-center justify-between">
+    <div class="flex items-center flex-1">
+      <!-- User Dropdown -->
+      <div class="relative inline-block text-left">
+        <button id="dropdownButton"
+          class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+          <div class="w-8 h-8 rounded-full bg-gray-300">
+            <img src="./07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt="" class="w-8 h-8 rounded-full bg-gray-300" />
+          </div>
+          <span class="font-semibold">Dominique Ch.</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+          <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-rocket text-gray-600"></i> Performance review
+          </a>
+        </div>
+      </div>
+      <!-- Quick Search -->
+      <div class="flex items-center gap-2 text-sm text-gray-500 ml-8 cursor-pointer">
+        <img src="./search.png" alt="Search" class="w-5 h-5" />
+        <span>Quick search</span>
+      </div>
+    </div>
+    <!-- Notifications -->
+    <div class="relative">
+      <img src="./notifications.png" alt="Notifications" class="w-5 h-5 cursor-pointer" />
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="flex h-[calc(100vh-64px)]">
+    <!-- Sidebar -->
+    <aside class="w-64 p-6 flex flex-col justify-between bg-gray-100">
+      <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./dashboard.png" alt="Dashboard" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./PO.png" alt="People" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./assignment.png" alt="Projects" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-calendar.png" alt="Calendar" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html" class="flex items-center space-x-3 text-blue-600 bg-blue-50  p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-easel.png" alt="Training" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-hourglass.png" alt="Timesheet" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded">
+          <img src="./_ionicons_svg_md-chatbubbles.png" alt="Reports" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./AS.png" alt="Administration" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./people.png" alt="Help" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+      <div class="bg-white rounded-lg text-center py-4">
+        <p class="text-xs font-extrabold font-[Montserrat]">CAMIOCA</p>
+        <p class="text-[10px] text-gray-500 font-[Roboto]">
+          Version: 1.0.0.11
+        </p>
+      </div>
+    </aside>
+    <main class="flex-1 p-6 overflow-y-auto">
+            <div class="flex flex-wrap gap-6">
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer hover:bg-blue-200">
+                  <i class="fas fa-calendar-alt text-2xl mb-2"></i>
+                  <a href="./Treaning.html">Training timetable</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-blue-500 text-white  rounded-xl flex flex-col items-center justify-center cursor-pointer shadow ">
+                    <i class="fas fa-search text-2xl mb-2 text-gray-600"></i>
+                    <a href="./Find_Treannig.html">Find training</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-comment text-2xl mb-2 text-gray-600"></i>
+                    <a href="./Feedback.html">Feedback</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-question-circle text-2xl mb-2 text-gray-600"></i>
+                    <a href="./Quizzes.html">Quizzes</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-user-plus text-2xl mb-2 text-gray-600"></i>
+                    <a href="Treaning_Registration.html">Training registration</a>
+                </div>
+            </div>
+
+            <!-- Filter Section --> 
+            <div class="bg-white rounded-lg shadow-sm border p-8 max-w-6xl mt-4">
+                <!-- Filter Header -->
+                <h2 class="text-xl font-semibold text-gray-800 mb-8">Filter</h2>
+
+                <!-- Top Row - Dropdowns -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <!-- Field of Knowledge -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Field of knowledge</label>
+                        <div class="relative">
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none text-base">
+                                <option value="all">All</option>
+                                <option value="it">Information Technology</option>
+                                <option value="hr">Human Resources</option>
+                                <option value="finance">Finance</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <!-- Training -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Training</label>
+                        <div class="relative">
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none text-base">
+                                <option value="all">All</option>
+                                <option value="security">Security Awareness</option>
+                                <option value="induction">Induction Program</option>
+                                <option value="technical">Technical Training</option>
+                                <option value="soft-skills">Soft Skills</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <!-- Instructors -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Instructors</label>
+                        <div class="relative">
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none text-base">
+                                <option value="all">All</option>
+                                <option value="keithlyn">Keithlyn O'Hara</option>
+                                <option value="matthew">Matthew Brandstock</option>
+                                <option value="chris">Chris Columbus</option>
+                                <option value="arnold">Arnold Harris</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row - Period and Radio Buttons -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Period -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Period</label>
+                        <div class="relative">
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none text-base">
+                                <option value="other">Other</option>
+                                <option value="this-week">This Week</option>
+                                <option value="this-month">This Month</option>
+                                <option value="this-quarter">This Quarter</option>
+                                <option value="this-year">This Year</option>
+                                <option value="last-month">Last Month</option>
+                                <option value="last-quarter">Last Quarter</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <!-- Radio Buttons -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">&nbsp;</label>
+                        <div class="flex items-center space-x-8 pt-3">
+                            <label class="flex items-center">
+                                <input type="radio" name="dateType" value="actual" checked
+                                    class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" />
+                                <span class="ml-3 text-base text-gray-700">actual dates</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="dateType" value="planned"
+                                    class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" />
+                                <span class="ml-3 text-base text-gray-700">planned</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Row - Date Pickers -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Start Date -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Start date:</label>
+                        <div class="relative">
+                            <input type="date"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base" />
+                            <i class="fas fa-calendar-alt absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <!-- Finish Date -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Finish date:</label>
+                        <div class="relative">
+                            <input type="date"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base" />
+                            <i class="fas fa-calendar-alt absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="mb-8">
+                    <label class="flex items-center">
+                        <input type="checkbox"
+                            class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
+                        <span class="ml-3 text-base text-gray-700">Show inactive trainings</span>
+                    </label>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex justify-end space-x-6 pt-6 border-t border-gray-200">
+                    <button type="button"
+                        class="px-8 py-3 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors text-base font-medium">
+                        Clear
+                    </button>
+                    <button type="button"
+                        class="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-base font-medium">
+                        Apply Filter
+                    </button>
+                </div>
+            </div>
+        
+  </div>
+  <script>
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownButton.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+</html>

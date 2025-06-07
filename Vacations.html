@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans text-sm">
+  <!-- Header -->
+  <header class="bg-white w-full p-3 shadow flex items-center justify-between">
+    <div class="flex items-center gap-8 flex-1">
+      <!-- Profile Dropdown -->
+      <div class="relative">
+        <button id="dropdownButton"
+          class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+          <img src="./07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt="Profile" class="w-8 h-8 rounded-full" />
+          <span class="font-semibold">Dominique Ch.</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        <div id="dropdownMenu" class="hidden absolute mt-2 w-56 bg-white rounded-xl shadow-lg z-30">
+          <ul>
+            <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+            <li><a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100"><i
+                  class="fas fa-file-alt text-gray-600"></i> Corporate CV</a></li>
+            <li><a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100"><i
+                  class="fas fa-rocket text-gray-600"></i> Performance review</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quick Search -->
+      <div class="flex items-center gap-2 text-gray-500 cursor-pointer">
+        <img src="./search.png" alt="Search" class="w-5 h-5" />
+        <span>Quick search</span>
+      </div>
+    </div>
+
+    <!-- Notifications -->
+    <div>
+      <img src="./notifications.png" alt="Notifications" class="w-5 h-5 cursor-pointer" />
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="flex h-[calc(100vh-64px)]">
+    <!-- Sidebar -->
+    <aside class="w-64  p-6 bg-gray-100 flex flex-col justify-between">
+      <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./dashboard.png" alt="Dashboard" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./PO.png" alt="People" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./assignment.png" alt="Projects" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-calendar.png" alt="Calendar" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-easel.png" alt="Training" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-hourglass.png" alt="Timesheet" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-blue-600 bg-blue-50 p-2 rounded">
+          <img src="./_ionicons_svg_md-chatbubbles.png" alt="Reports" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./AS.png" alt="Administration" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html"
+          class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./people.png" alt="Help" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+      <div class="bg-white rounded-lg text-center py-4">
+        <p class="text-xs font-bold font-[Montserrat]">CAMIOCA</p>
+        <p class="text-[10px] text-gray-500 font-[Roboto]">Version: 1.0.0.11</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto space-y-6 bg-gray-100 min-h-screen">
+      <!-- User Info Card -->
+      <!-- Date Selector -->
+      <div class="bg-white p-4 rounded-lg shadow w-fit">
+        <label class="block text-sm font-medium text-gray-700 mb-2">Select the date</label>
+        <div class="flex items-center space-x-2">
+          <button class="px-3 py-1 bg-gray-100 rounded-md hover:bg-gray-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <span class="text-lg font-semibold">2019</span>
+          <button class="px-3 py-1 bg-gray-100 rounded-md hover:bg-gray-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          <button class="p-2 bg-gray-100 text-blue-600 rounded-md h-9 w-9">
+            <img src="./Date picker.png" alt="" class="h-6 w-6">
+          </button>
+        </div>
+      </div>
+
+      <!-- Planned Vacations -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold">Planned vacations</h3>
+          <button class="flex items-center text-blue-600 border border-blue-500 px-3 py-1 rounded hover:bg-blue-50">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Add row
+          </button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm text-left">
+            <thead class="bg-gray-200 text-gray-700">
+              <tr>
+                <th class="px-4 py-2 font-semibold">Status</th>
+                <th class="px-4 py-2 font-semibold">Dates</th>
+                <th class="px-4 py-2 font-semibold">Duration in days</th>
+                <th class="px-4 py-2 font-semibold">Workdays</th>
+                <th class="px-4 py-2 font-semibold">Holidays</th>
+                <th class="px-4 py-2 font-semibold">Approved</th>
+                <th class="px-4 py-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t">
+                <td class="px-4 py-2"><span class="inline-block w-3 h-3 rounded-full bg-green-500"></span></td>
+                <td class="px-4 py-2">12.08.2019 - 22.08.2019</td>
+                <td class="px-4 py-2">14</td>
+                <td class="px-4 py-2">10</td>
+                <td class="px-4 py-2">4</td>
+                <td class="px-4 py-2">Michael Bluemans</td>
+                <td class="px-4 py-2 space-x-2 text-blue-600">
+                  <button><svg class="w-4 h-4" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15.232 5.232l3.536 3.536M9 11l3-3 6 6-3 3-6-6z" />
+                    </svg></button>
+                  <button><svg class="w-4 h-4" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg></button>
+                </td>
+              </tr>
+              <tr class="bg-gray-50 border-t">
+                <td class="px-4 py-2"><span class="inline-block w-3 h-3 rounded-full bg-green-500"></span></td>
+                <td class="px-4 py-2">21.12.2019 - 31.12.2019</td>
+                <td class="px-4 py-2">7</td>
+                <td class="px-4 py-2">5</td>
+                <td class="px-4 py-2">2</td>
+                <td class="px-4 py-2">Michael Bluemans</td>
+                <td class="px-4 py-2 space-x-2 text-blue-600">
+                  <button><svg class="w-4 h-4" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15.232 5.232l3.536 3.536M9 11l3-3 6 6-3 3-6-6z" />
+                    </svg></button>
+                  <button><svg class="w-4 h-4" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg></button>
+                </td>
+              </tr>
+              <tr class="font-semibold border-t">
+                <td class="px-4 py-2" colspan="2">Totals</td>
+                <td class="px-4 py-2">21</td>
+                <td class="px-4 py-2">15</td>
+                <td class="px-4 py-2">6</td>
+                <td colspan="2"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Actual Vacations -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <h3 class="text-lg font-semibold mb-3">Actual vacations</h3>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm text-left">
+            <thead class="bg-gray-200 text-gray-700">
+              <tr>
+                <th class="px-4 py-2 font-semibold">Status</th>
+                <th class="px-4 py-2 font-semibold">Dates</th>
+                <th class="px-4 py-2 font-semibold">Duration in days</th>
+                <th class="px-4 py-2 font-semibold">Workdays</th>
+                <th class="px-4 py-2 font-semibold">Holidays</th>
+                <th class="px-4 py-2 font-semibold">Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t">
+                <td class="px-4 py-2"><span class="inline-block w-3 h-3 rounded-full bg-green-500"></span></td>
+                <td class="px-4 py-2">12.08.2019 - 22.08.2019</td>
+                <td class="px-4 py-2">14</td>
+                <td class="px-4 py-2">10</td>
+                <td class="px-4 py-2">4</td>
+                <td class="px-4 py-2">Approved and paid</td>
+              </tr>
+              <tr class="bg-gray-50 border-t">
+                <td class="px-4 py-2"><span class="inline-block w-3 h-3 rounded-full bg-green-500"></span></td>
+                <td class="px-4 py-2">21.12.2019 - 31.12.2019</td>
+                <td class="px-4 py-2">7</td>
+                <td class="px-4 py-2">5</td>
+                <td class="px-4 py-2">2</td>
+                <td class="px-4 py-2">In processing</td>
+              </tr>
+              <tr class="font-semibold border-t">
+                <td class="px-4 py-2" colspan="2">Totals</td>
+                <td class="px-4 py-2">21</td>
+                <td class="px-4 py-2">15</td>
+                <td class="px-4 py-2">6</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+
+
+  </main>
+
+  </div>
+
+  <!-- Dropdown Script -->
+  <script>
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownButton.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMIOCA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-white w-full p-2 shadow flex items-center justify-between">
+    <div class="flex items-center flex-1">
+      <!-- User Dropdown -->
+      <div class="relative inline-block text-left">
+        <button id="dropdownButton"
+          class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+          <div class="w-8 h-8 rounded-full bg-gray-300">
+            <img src="./07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt="" class="w-8 h-8 rounded-full bg-gray-300" />
+          </div>
+          <span class="font-semibold">Dominique Ch.</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+          <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-rocket text-gray-600"></i> Performance review
+          </a>
+        </div>
+      </div>
+      <!-- Quick Search -->
+      <div class="flex items-center gap-2 text-sm text-gray-500 ml-8 cursor-pointer">
+        <img src="./search.png" alt="Search" class="w-5 h-5" />
+        <span>Quick search</span>
+      </div>
+    </div>
+    <!-- Notifications -->
+    <div class="relative">
+      <img src="./notifications.png" alt="Notifications" class="w-5 h-5 cursor-pointer" />
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="flex h-[calc(100vh-64px)]">
+    <!-- Sidebar -->
+    <aside class="w-64 p-6 flex flex-col justify-between bg-gray-100">
+      <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./dashboard.png" alt="Dashboard" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./PO.png" alt="People" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html" class="flex items-center space-x-3 text-blue-600 bg-blue-50  p-2 rounded hover:bg-blue-50">
+          <img src="./assignment.png" alt="Projects" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-calendar.png" alt="Calendar" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-easel.png" alt="Training" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-hourglass.png" alt="Timesheet" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded">
+          <img src="./_ionicons_svg_md-chatbubbles.png" alt="Reports" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./AS.png" alt="Administration" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./people.png" alt="Help" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+      <div class="bg-white rounded-lg text-center py-4">
+        <p class="text-xs font-extrabold font-[Montserrat]">CAMIOCA</p>
+        <p class="text-[10px] text-gray-500 font-[Roboto]">
+          Version: 1.0.0.11
+        </p>
+      </div>
+    </aside>
+    <section class="flex-1 p-6 overflow-y-auto flex flex-col gap-6 relative mt-[2px]">
+            <!-- Action Tiles -->
+            <div class="flex flex-wrap gap-6 ">
+                <div
+                    class="w-[214px] h-[116px] bg-blue-500 text-white  rounded-xl flex flex-col items-center justify-center cursor-pointer">
+                    <img src="./_ionicons_svg_md-search (1).png" alt="Find person" />
+                    <a href="./Project.html">Find Person</a>
+                </div>
+
+                <div
+                    class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer">
+                    <img src="./baseline-archive-24px.png" alt="All people" />
+                    <a href="./Project_List.html">All Projects</a>
+                </div>
+                <div
+                    class="w-[214px] h-[116px] text-white bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer">
+                    <img src="./baseline-account_MP_circle-24px.png" alt="All people" />
+                    <p class="text-black">Accounts</p>
+                </div>
+            </div>
+
+     <div class="bg-white rounded-lg shadow-sm p-6 w-full">
+        <h2 class="text-xl font-semibold text-gray-800 mb-6">Filter</h2>
+
+        <form id="projectFilterForm" action="/search-projects" method="post" class="w-full">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Row 1 -->
+            <div class="space-y-2">
+              <label for="projectName" class="block text-sm font-medium text-gray-700">Project name</label>
+              <input type="text" id="projectName" name="projectName" placeholder="Search..." 
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+            </div>
+            <div class="space-y-2">
+              <label for="budgetType" class="block text-sm font-medium text-gray-700">Budget type</label>
+              <select id="budgetType" name="budgetType"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Any</option>
+                <option value="fixed">Fixed</option>
+                <option value="variable">Variable</option>
+              </select>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="space-y-2">
+              <label for="shortName" class="block text-sm font-medium text-gray-700">Short name</label>
+              <input type="text" id="shortName" name="shortName" placeholder="Search..."
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+            </div>
+            <div class="space-y-2">
+              <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+              <div class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 min-h-[40px] flex items-center">
+                <input type="hidden" id="status" name="status" value="in_progress">
+                <span class="status-tag">
+                  In progress
+                  <span class="close-btn">&times;</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="md:col-span-2 space-y-2">
+              <label for="description" class="block text-sm font-medium text-gray-700">Project description</label>
+              <input type="text" id="description" name="description" placeholder="Search..."
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+              <p class="text-xs text-gray-500">Notion: Full-text searching</p>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="space-y-2">
+              <label for="practice" class="block text-sm font-medium text-gray-700">Practice</label>
+              <select id="practice" name="practice"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Select</option>
+                <option value="practice1">Practice 1</option>
+                <option value="practice2">Practice 2</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label for="account" class="block text-sm font-medium text-gray-700">Account</label>
+              <select id="account" name="account"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Select</option>
+                <option value="account1">Account 1</option>
+                <option value="account2">Account 2</option>
+              </select>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700">Start date from:</label>
+              <div class="flex gap-2">
+                <div class="flex-1 relative">
+                  <input type="date" id="startDateFrom" name="startDateFrom"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                </div>
+                <div class="flex-1 relative">
+                  <input type="date" id="startDateTo" name="startDateTo"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700">Finish date from:</label>
+              <div class="flex gap-2">
+                <div class="flex-1 relative">
+                  <input type="date" id="finishDateFrom" name="finishDateFrom"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                </div>
+                <div class="flex-1 relative">
+                  <input type="date" id="finishDateTo" name="finishDateTo"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="space-y-2">
+              <label for="sourceType" class="block text-sm font-medium text-gray-700">Source type</label>
+              <select id="sourceType" name="sourceType"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Select</option>
+                <option value="type1">Type 1</option>
+                <option value="type2">Type 2</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label for="msaSigner" class="block text-sm font-medium text-gray-700">MSA signer</label>
+              <select id="msaSigner" name="msaSigner"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Select</option>
+                <option value="signer1">Signer 1</option>
+                <option value="signer2">Signer 2</option>
+              </select>
+            </div>
+
+            <!-- Row 7 -->
+            <div class="space-y-2">
+              <label for="billingEntity" class="block text-sm font-medium text-gray-700">Billing entity</label>
+              <select id="billingEntity" name="billingEntity"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Select</option>
+                <option value="entity1">Entity 1</option>
+                <option value="entity2">Entity 2</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label for="industry" class="block text-sm font-medium text-gray-700">Industry</label>
+              <select id="industry" name="industry"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Select</option>
+                <option value="technology">Technology</option>
+                <option value="finance">Finance</option>
+              </select>
+            </div>
+
+            <!-- Row 8 -->
+            <div class="space-y-2">
+              <label for="region" class="block text-sm font-medium text-gray-700">Region</label>
+              <select id="region" name="region"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50">
+                <option value="">Select</option>
+                <option value="northAmerica">North America</option>
+                <option value="europe">Europe</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700">Search mode</label>
+              <div class="flex items-center gap-6 mt-3">
+                <label class="flex items-center">
+                  <input type="radio" name="searchMode" value="and" class="mr-2">
+                  <span>AND</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="searchMode" value="or" checked class="mr-2">
+                  <span>OR</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex justify-end gap-4 mt-8">
+            <button type="reset"
+              class="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors">
+              Clear
+            </button>
+            <button type="submit"
+              class="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+  </div>
+</body>
+
+</html>

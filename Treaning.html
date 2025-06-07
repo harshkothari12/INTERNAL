@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMIOCA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background-color: #e5e7eb;
+        }
+        .calendar-day {
+            background-color: white;
+            min-height: 120px;
+            padding: 8px;
+            position: relative;
+        }
+        .calendar-day.other-month {
+            background-color: #f9fafb;
+            color: #9ca3af;
+        }
+        .calendar-event {
+            background-color: #ef4444;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+        .calendar-event.management {
+            background-color: #10b981;
+        }
+        .calendar-event.online {
+            background-color: #3b82f6;
+        }
+        .calendar-header {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background-color: #e5e7eb;
+            margin-bottom: 1px;
+        }
+        .calendar-header-day {
+            background-color: #f3f4f6;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white w-full p-2 shadow flex items-center justify-between">
+        <div class="flex items-center flex-1">
+            <div class="relative inline-block text-left">
+                <button id="dropdownButton" class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+                    <div class="w-8 h-8 rounded-full bg-gray-300">
+                        <img src="/placeholder.svg?height=32&width=32" alt="User profile" class="w-8 h-8 rounded-full object-cover">
+                    </div>
+                    <span class="font-semibold">Dominique Ch.</span>
+                    <i class="fas fa-chevron-down text-sm"></i>
+                </button>
+                <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+                    <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+                        <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-b-xl">
+                        <i class="fas fa-rocket text-gray-600"></i> Performance review
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-500 ml-8 cursor-pointer">
+                <i class="fas fa-search"></i>
+                <span>Quick search</span>
+            </div>
+        </div>
+        <div class="relative">
+            <i class="fas fa-bell text-gray-600 cursor-pointer"></i>
+        </div>
+    </header>
+
+    <div class="flex h-[calc(100vh-64px)]">
+        <aside class="w-64 p-6 flex flex-col justify-between bg-gray-100">
+            <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./dashboard.png" alt="Dashboard" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./PO.png" alt="People" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./assignment.png" alt="Projects" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-calendar.png" alt="Calendar" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html" class="flex items-center space-x-3 text-blue-600 bg-blue-50  p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-easel.png" alt="Training" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-hourglass.png" alt="Timesheet" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded">
+          <img src="./_ionicons_svg_md-chatbubbles.png" alt="Reports" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./AS.png" alt="Administration" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./people.png" alt="Help" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+            <div class="bg-white rounded-lg text-center py-4">
+                <p class="text-xs font-extrabold">CAMIOCA</p>
+                <p class="text-[10px] text-gray-500">Version: 1.0.0.11</p>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-3 overflow-y-auto flex flex-col gap-6 relative pt-[25px]">
+            <div class="flex flex-wrap gap-6">
+                <div class="w-[214px] h-[116px] bg-blue-500 text-white rounded-xl flex flex-col items-center justify-center cursor-pointer">
+                    <i class="fas fa-calendar-alt text-2xl mb-2"></i>
+                    <p>Training timetable</p>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-search text-2xl mb-2 text-gray-600"></i>
+                    <a href="./Find_Treannig.html">Find training</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-comment text-2xl mb-2 text-gray-600"></i>
+                    <a href="./Feedback.html">Feedback</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-question-circle text-2xl mb-2 text-gray-600"></i>
+                    <a href="./Quizzes.html">Quizzes</a>
+                </div>
+                <div class="w-[214px] h-[116px] bg-white rounded-xl flex flex-col items-center justify-center cursor-pointer shadow hover:bg-blue-200">
+                    <i class="fas fa-user-plus text-2xl mb-2 text-gray-600"></i>
+                    <a href="Treaning_Registration.html">Training registration</a>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow-sm">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">Filter</h2>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
+                    <div>
+                        <label for="select-date" class="block text-sm font-medium text-gray-700 mb-1">Select the date</label>
+                        <div class="relative">
+                            <input type="date" id="select-date" class="block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="2019-07-01">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="branch" class="block text-sm font-medium text-gray-700 mb-1">Branch</label>
+                        <select id="branch" name="branch" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>Paris</option>
+                            <option>London</option>
+                            <option>New York</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="field-of-knowledge" class="block text-sm font-medium text-gray-700 mb-1">Field of knowledge</label>
+                        <select id="field-of-knowledge" name="field-of-knowledge" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>All</option>
+                            <option>Management</option>
+                            <option>Technical</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="language" class="block text-sm font-medium text-gray-700 mb-1">Language</label>
+                        <select id="language" name="language" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>All</option>
+                            <option>English</option>
+                            <option>French</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-1">
+                        <div class="bg-blue-50 border border-blue-200 text-blue-700 p-4 rounded-md text-sm">
+                            <span class="font-semibold">Note:</span> Training time is displayed in your local time
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Section -->
+            <div class="bg-white rounded-lg shadow-sm">
+                <div class="calendar-header bg-white">
+                    <div class="calendar-header-day">Monday</div>
+                    <div class="calendar-header-day">Tuesday</div>
+                    <div class="calendar-header-day">Wednesday</div>
+                    <div class="calendar-header-day">Thursday</div>
+                    <div class="calendar-header-day">Friday</div>
+                    <div class="calendar-header-day">Saturday</div>
+                    <div class="calendar-header-day">Sunday</div>
+                </div>
+                
+                <div id="calendarGrid" class="calendar-grid">
+                    <!-- Calendar days will be generated by JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Dropdown functionality
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        dropdownButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+        });
+        
+        document.addEventListener('click', (e) => {
+            if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+
+        // Calendar functionality
+        let currentDate = new Date(2019, 6, 1); // July 2019
+        
+        const trainingEvents = [
+            {
+                date: new Date(2019, 6, 10),
+                title: "Management in Parliament",
+                type: "management",
+                time: "10:00"
+            },
+            {
+                date: new Date(2019, 6, 10),
+                title: "Online Training",
+                type: "online",
+                time: "14:00"
+            }
+        ];
+
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            
+            // Get first day of month
+            const firstDay = new Date(year, month, 1);
+            
+            // Get first Monday of the calendar view
+            const startDate = new Date(firstDay);
+            const dayOfWeek = firstDay.getDay();
+            const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+            startDate.setDate(firstDay.getDate() - daysToSubtract);
+            
+            const calendarGrid = document.getElementById('calendarGrid');
+            calendarGrid.innerHTML = '';
+            
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+            
+            // Generate 42 days (6 weeks)
+            for (let i = 0; i < 42; i++) {
+                const currentDay = new Date(startDate);
+                currentDay.setDate(startDate.getDate() + i);
+                
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                
+                if (currentDay.getMonth() !== month) {
+                    dayElement.classList.add('other-month');
+                }
+                
+                const dayNumber = document.createElement('div');
+                dayNumber.className = 'text-2xl font-light text-gray-800 mb-1';
+                dayNumber.textContent = currentDay.getDate();
+                dayElement.appendChild(dayNumber);
+                
+                const monthLabel = document.createElement('div');
+                monthLabel.className = 'text-xs text-gray-400 mb-2';
+                monthLabel.textContent = monthNames[currentDay.getMonth()];
+                dayElement.appendChild(monthLabel);
+                
+                // Add events for this day
+                const dayEvents = trainingEvents.filter(event => 
+                    event.date.toDateString() === currentDay.toDateString()
+                );
+                
+                dayEvents.forEach(event => {
+                    const eventElement = document.createElement('div');
+                    eventElement.className = `calendar-event ${event.type}`;
+                    eventElement.innerHTML = `
+                        <div class="font-semibold">${event.time}</div>
+                        <div>${event.title}</div>
+                    `;
+                    dayElement.appendChild(eventElement);
+                });
+                
+                calendarGrid.appendChild(dayElement);
+            }
+        }
+        
+        // Filter functionality
+        document.getElementById('select-date').addEventListener('change', (e) => {
+            const selectedDate = new Date(e.target.value);
+            currentDate = selectedDate;
+            renderCalendar();
+        });
+        
+        // Initialize calendar
+        renderCalendar();
+    </script>
+</body>
+</html>

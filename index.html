@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMIOCA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-white w-full p-2 shadow flex items-center justify-between">
+    <div class="flex items-center flex-1">
+      <!-- User Dropdown -->
+      <div class="relative inline-block text-left">
+        <button id="dropdownButton"
+          class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+          <div class="w-8 h-8 rounded-full bg-gray-300">
+            <img src="./07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt="" class="w-8 h-8 rounded-full bg-gray-300" />
+          </div>
+          <span class="font-semibold">Dominique Ch.</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+          <a href="./My_Deatil.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-user text-gray-600"></i> My details
+          </a>
+          <a href="./Calender.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+          </a>
+          <a href="./Vacations.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+            <i class="fas fa-rocket text-gray-600"></i> Performance review
+          </a>
+        </div>
+      </div>
+      <!-- Quick Search -->
+      <div class="flex items-center gap-2 text-sm text-gray-500 ml-8 cursor-pointer">
+        <img src="./search.png" alt="Search" class="w-5 h-5" />
+        <span>Quick search</span>
+      </div>
+    </div>
+    <!-- Notifications -->
+    <div class="relative">
+      <img src="./notifications.png" alt="Notifications" class="w-5 h-5 cursor-pointer" />
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="flex h-[calc(100vh-64px)]">
+    <!-- Sidebar -->
+    <aside class="w-64 p-6 flex flex-col justify-between bg-gray-100">
+      <div class="bg-white rounded-xl shadow px-3 py-4 space-y-2">
+        <a href="./index.html" class="flex items-center space-x-3 bg-blue-50 text-blue-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./dashboard.png" alt="Dashboard" class="w-5 h-5" />
+          <span>Dashboard</span>
+        </a>
+        <a href="./People.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./PO.png" alt="People" class="w-5 h-5" />
+          <span>People</span>
+        </a>
+        <a href="./Project.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./assignment.png" alt="Projects" class="w-5 h-5" />
+          <span>Projects</span>
+        </a>
+        <a href="./Calender.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-calendar.png" alt="Calendar" class="w-5 h-5" />
+          <span>Calendar</span>
+        </a>
+        <a href="./Treaning.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-easel.png" alt="Training" class="w-5 h-5" />
+          <span>Training</span>
+        </a>
+        <a href="./Timesheet.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./_ionicons_svg_md-hourglass.png" alt="Timesheet" class="w-5 h-5" />
+          <span>Timesheet</span>
+        </a>
+        <a href="./Report_1.html" class="flex items-center space-x-3 text-gray-700  p-2 rounded">
+          <img src="./_ionicons_svg_md-chatbubbles.png" alt="Reports" class="w-5 h-5" />
+          <span>Reports</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./AS.png" alt="Administration" class="w-5 h-5" />
+          <span>Administration</span>
+        </a>
+        <a href="./index.html" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 p-2 rounded hover:bg-blue-50">
+          <img src="./people.png" alt="Help" class="w-5 h-5" />
+          <span>Help</span>
+        </a>
+      </div>
+      <div class="bg-white rounded-lg text-center py-4">
+        <p class="text-xs font-extrabold font-[Montserrat]">CAMIOCA</p>
+        <p class="text-[10px] text-gray-500 font-[Roboto]">
+          Version: 1.0.0.11
+        </p>
+      </div>
+    </aside>
+
+    <main class="flex-1 p-6 overflow-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+        <!-- Company Facts -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4">Company Facts</h2>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm text-gray-600">Employees</p>
+              <img src="./Diagrams.png" alt="">
+            </div>
+        </div>
+
+        </div>
+
+        <!-- Statistics -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4">Statistics</h2>
+          <div class="flex flex-col items-center">
+            <img src="./Widget 2.png" alt="">
+            
+          </div>
+        </div>
+        <div class="mt-8 flex justify-end items-start">
+        <button id="addWidgetBtn" class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-medium px-6 py-3 rounded-full flex items-center space-x-2 shadow-lg transition-all duration-200 hover:shadow-xl transform hover:scale-105 active:scale-95">
+            <img src="./Add.png" alt="">
+            <span>Add widget</span>
+        </button>
+        <p id="clickMessage" class="mt-4 text-gray-600 hidden">Widget added successfully!</p>
+    </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Assigned Risks -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4">Assigned Risks</h2>
+          <div class="flex items-center justify-center h-32 text-gray-500">
+            <p class="text-sm">There are no risks assigned</p>
+          </div>
+        </div>
+
+        <!-- Assigned Action Items -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4">Assigned Action Items</h2>
+          <div class="flex items-center justify-center h-32 text-gray-500">
+            <p class="text-sm">There are no action items assigned</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const dropdownButton = document.getElementById("dropdownButton");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      dropdownButton.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
+      
+        // Add click functionality
+        document.getElementById('addWidgetBtn').addEventListener('click', function() {
+            const message = document.getElementById('clickMessage');
+            message.classList.remove('hidden');
+            setTimeout(() => {
+                message.classList.add('hidden');
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
